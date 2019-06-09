@@ -1,11 +1,11 @@
 {
     "dacName": "Council of Ricks",
-    "dacScope": "eos.dac",
+    "dacScope": "mortys11",
     "contracts": {
         "token": {
-            "name": "kasdactokens",
-            "symbol": "KASDAC",
-            "totalSupply": 1000000000.0000,
+            "name": "mortys11tokn",
+            "symbol": "MORTYS",
+            "totalSupply": 10000000000000.0000,
             "decimals": 4
         },
         "system_token": {
@@ -14,8 +14,8 @@
             "decimals": 4
         },
         "custodian": {
-            "name": "dacelections",
-            "memo": "dacelections",
+            "name": "mortys11cust",
+            "memo": "mortys11cust",
             "enable_voting" : true
         },
         "bot":{
@@ -25,50 +25,49 @@
             "name": "eosiomsigold"
         },
         "dac_msig": {
-            "name": "dacmultisigs"
+            "name": "mortys11mult"
         },
         "wpproposal":{
-            "name": "dacproposals"
+            "name": "mortys11prop"
         },
         "escrow":{
             "name": "eosdacescrow"
         }
-          
     },
 
     "bpAccount": {
         "name": "eosdacserval"
     },
     "treasuryAccount":{
-        "name": "eosdacdoshhq"
+        "name": "mortys11ownr"
     },
 
     "authAccount": {
-        "name": "dacauthority",
+        "name": "dacfac24auth",
         "controlling": [
             {
-                "name":"eosdacdoshhq", 
+                "name":"mortys11ownr",
                 "linkedAuths": [
                     {"contract": "eosio.token", "action": "transfer", "permission": "xfer", "label": "Transfer EOS"}
                 ]
             },
             {
-                "name":"dacelections", 
+                "name":"mortys11cust",
                 "linkedAuths": [
-                    {"contract": "kasdactokens", "action": "transfer", "permission": "xfer", "label": "Transfer KASDAC"}
+                    {"contract": "mortys11tokn", "action": "transfer", "permission": "xfer", "label": "Transfer DACFAC"}
                 ]
             },
             {
-                "name":"kasdactokens", 
+                "name":"mortys11tokn",
                 "linkedAuths": [
-                    {"contract": "kasdactokens", "action": "newmemterms", "permission": "active", "label": "Update Constitution"}
+                    {"contract": "mortys11tokn", "action": "newmemterms", "permission": "active", "label": "Update Constitution"}
                 ]
             },
             {
-                "name":"dacauthority", 
+                "name":"mortys11auth",
                 "linkedAuths":[
-                    {"contract": "dacelections", "action": "firecust", "permission": "med", "label": "Fire Custodian"},
-                    {"contract": "dacelections", "action": "firecand", "permission": "med", "label": "Fire Candidate"}
+                    {"contract": "mortys11cust", "action": "firecust", "permission": "med", "label": "Fire Custodian"},
+                    {"contract": "mortys11cust", "action": "firecand", "permission": "med", "label": "Fire Candidate"}
                 ]
             }
 
@@ -78,15 +77,14 @@
     "api": {
         "default_eos_node": "https://jungle2.cryptolions.io:443",
         "bpnodes": "https://eosdac.io/topnodes.json",
-        "memberclient": "http://ns3119712.ip-51-38-42.eu:3000",
-        "memberclient_state_api": "https://api-jungle.eosdac.io/v1/eosdac",
+        "memberclient": "",
+        "memberclient_state_api": "https://mortys.lukestokes.info/v1/eosdac",
         "hyperion": "https://jungle.hyperion.eosrio.io/v2/state",
         "firehose": "ws://jungle.eosdac.io:1337"
-
     },
 
     "external":{
-        "homepage": "https://eosdac.io",
+        "homepage": "http://mortys.io",
         "explorer": "https://jungle.bloks.io"
     }
 }

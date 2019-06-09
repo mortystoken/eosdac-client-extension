@@ -5,7 +5,7 @@
       <q-item-main :label="$t('default.example_page')" class="text-text1" />
     </q-item> -->
     <q-item
-      @click.native="openURL('https://explorer.eosdac.io')"
+      @click.native="openURL('https://jungle.bloks.io/account/mortys11tokn')"
       class="cursor-pointer"
     >
       <q-item-side :icon="$configFile.icon.explorer" color="text2" />
@@ -14,7 +14,7 @@
     </q-item>
 
     <q-item
-      @click.native="openURL('https://discord.io/eosdac')"
+      @click.native="openURL('https://t.me/mortystoken')"
       class="cursor-pointer"
     >
       <q-item-side :icon="$configFile.icon.support" color="text2" />
